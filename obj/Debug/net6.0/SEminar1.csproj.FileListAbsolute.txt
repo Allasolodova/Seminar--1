@@ -1,0 +1,16 @@
+C:\Users\Алла\Desktop\SEminar1\bin\Debug\net6.0\SEminar1.exe
+C:\Users\Алла\Desktop\SEminar1\bin\Debug\net6.0\SEminar1.deps.json
+C:\Users\Алла\Desktop\SEminar1\bin\Debug\net6.0\SEminar1.runtimeconfig.json
+C:\Users\Алла\Desktop\SEminar1\bin\Debug\net6.0\SEminar1.dll
+C:\Users\Алла\Desktop\SEminar1\bin\Debug\net6.0\ref\SEminar1.dll
+C:\Users\Алла\Desktop\SEminar1\bin\Debug\net6.0\SEminar1.pdb
+C:\Users\Алла\Desktop\SEminar1\obj\Debug\net6.0\SEminar1.GlobalUsings.g.cs
+C:\Users\Алла\Desktop\SEminar1\obj\Debug\net6.0\SEminar1.csproj.AssemblyReference.cache
+C:\Users\Алла\Desktop\SEminar1\obj\Debug\net6.0\SEminar1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Алла\Desktop\SEminar1\obj\Debug\net6.0\SEminar1.AssemblyInfoInputs.cache
+C:\Users\Алла\Desktop\SEminar1\obj\Debug\net6.0\SEminar1.AssemblyInfo.cs
+C:\Users\Алла\Desktop\SEminar1\obj\Debug\net6.0\SEminar1.csproj.CoreCompileInputs.cache
+C:\Users\Алла\Desktop\SEminar1\obj\Debug\net6.0\SEminar1.dll
+C:\Users\Алла\Desktop\SEminar1\obj\Debug\net6.0\ref\SEminar1.dll
+C:\Users\Алла\Desktop\SEminar1\obj\Debug\net6.0\SEminar1.pdb
+C:\Users\Алла\Desktop\SEminar1\obj\Debug\net6.0\SEminar1.genruntimeconfig.cache
