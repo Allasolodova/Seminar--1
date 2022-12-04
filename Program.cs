@@ -1,70 +1,114 @@
-﻿//Домашнее задание семинар 3
+﻿//YнАПИШИТЕ  цикл,который принимает на вход два числа(A и B) и возводит число Aв натуральную степень B.
+//3, 5 ->243
+//2, 4 -> 16
+//Задача 25 
 
-//Задача 19
+/*Console.Write(("Введите число:  ") );
+int a= int.Parse(Console.ReadLine()!);
+Console.Write("Введите степень: ");
+int b = int.Parse(Console.ReadLine()!);
 
-//Напишите программу,котрая принимает на вход пятизначное число и проверяет,является ли оно 
-//палиндромом(первое число равно последнему,второе равно предпоследнему).
+Console.WriteLine($"{a} в степени {b} = {Pow(a,b) }");
 
-//14212 -> нет
-//12821 -> да
-//23432 -> да
 
-/*Console.WriteLine("Введите число:");
-string num = Console.ReadLine()!;
-if(num.Length == 5)
+int Pow(int num, int rank)
+
 {
-     if(num[0] == num[4] && num[1] == num[3])
-     {
-          Console.Write("Палиндром");
-     }
-     else
-     {
-          Console.Write("Не палиндром");
-     }
-}
-else{
-     Console.WriteLine("Введено неверное число!");
-}
-*/
-//________________________________________________________________
 
-//Задача 21
+    if(b == 0) return 1;
 
-//Напишите программу,которая принимает на вход координаты двух точек
-//и находит расстояник между ними в 3D пространстве.
-
-//A(3,6,8); B(2,1,-7) ->15.84
-//A(7,-5,0); B(1,-1,9) -> 11.53
-
-//int[]mas  = {3, 6, 8, 2, 1, -7};
-/*int[]mas  = {7, -5, 0, 1, -1, 9};
+    int result = num;
+    for (int i = 2; i <= rank; i++)
+    {
+        result *= num;
+    }
+    return result;
+}*/
 
 
+//____________________________________________________________
 
-double masR = Math.Sqrt(Math.Pow(mas[0]-mas[2]-mas[4] , 3) + Math.Pow(mas[1]-mas[3]-mas[5], 3));
-Console.WriteLine($"{masR:f2}");*/
+// Задача 27
+//Напишите программу,которая принимает на вход число и выдаёт сумму цифр в числе
+//452 -> 11
+//82 -> 10
+//9012 -> 12
 
-//______________________________________________________________
+/*Console.Write("Введите число:");
+int num = int. Parse(Console.ReadLine()!);
 
-//Задача 23
-
-//Напишите программу,которая принимает неа вход число (N) и выдаёт таблицу кубов чисел от 1 до N
-//3 -> 1,8,27
-//5 -> 1,8,27,64,125
-
-/*Console.WriteLine("Введите число:");
-int num = int.Parse(Console.ReadLine()!);
-
-
-for(int i = 1; i <= num; i ++)
+int GetSumNums(int number)
 {
-     Console.Write( $"{Math.Pow(i, 3)} ");
+    int sum = 0;
+    while(number>0)
+    {
+        sum+=number%10;
+        number/=10;
+    
+    }
+    return sum;
+
+
 }
-*/
+Console.WriteLine(GetSumNums(num));*/
+
+ //------------------------------------------------------
+
+ /*Console.Write("Ввендите число: ");
+ int num = int.Parse(Console.ReadLine()!);
+
+ int GetSize(int number)  
+ {
+    int i =10;
+    int size = 1;
+    while(true)
+    {
+        if(number / i !=0)
+        {
+            size+=1;
+        }
+        else
+        {
+            break;
+        }
+        i *= 10;
+    }
+    return(size);
+
+ } 
+ Console.WriteLine(GetSize(num));*/
+
+// Задача 29
+//Напишите программу,которая задаёт массив из 8 элементов и выводит их на экран.
+
+/*int[]array = GetArray(8);
+Console.WriteLine($"[{String.Join(",", array) }]");
+
+
+//-----------------------------Метод----------------------
+
+
+int[] GetArray(int size) 
+
+{
+
+    int[] result = new int[size];
+    for (int i = 0; i < size; i++)
+
+    {
+
+        result[i] =new Random().Next();
+    }
+
+    return result;
+}*/
+
+
+    
 
 
 
 
-     
+
 
 
