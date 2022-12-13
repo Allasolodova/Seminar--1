@@ -1,89 +1,130 @@
-﻿                                                  // Семинар 
-//Задача   41
-//Пользователь  вводит с клавиатуры M чисел.
-//Посчистайте,сколько чисел строго больше 0 ввёл пользователь.
-//0, 7, 8, -2, -2 -> 2
-//1,-7, 567, 89, 223 -> 4
+﻿//                                      Семинар 7
+//                                      Задача 47
+//Задайте двумерный массив размером m*n, заполненный случайными вещественными числами.
+//m=3, n=4.
+//0,5 7 -2 -0,2
+//1 -3,3 8  -9,9
+//8 7,8 -7,1 9
 
-/*Console.Write("Введите числа через пробел:  ");
-int[] numbers = GetArrayFromString(Console.ReadLine()!);
-Console.WriteLine($"Количество чисел больше 0 -> {GetCountPositiveElements(numbers)}");
-Console.WriteLine();
 
-int[] GetArrayFromString(string stringArray)
+/*Console.Write("Введите количество строк  ");
+int LinesVol = Convert.ToInt32(Console.ReadLine()!);
+Console.WriteLine("Введите количество столбцов  ");
+int ColumnsVol = Convert.ToInt32(Console.ReadLine()!);
+double[,] numbers = new double[LinesVol,ColumnsVol];
+FillArrayRandomNumbers(numbers);
+PrintArray(numbers);
+
+void FillArrayRandomNumbers(double[,] array)
 {
-    string[] numS = stringArray.Split(" ", StringSplitOptions.RemoveEmptyEntries);
-    int[] result = new int[numS.Length];
-    for (int i = 0; i < result.Length; i++)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        result[i] = int.Parse(numS[i]);
+         for (int j = 0; j < array.GetLength(0); j++)
+         {
+            array[i, j] = Convert.ToDouble(new Random().Next(-100, 100)) / 10;
+         }
     }
-    return result;
 }
 
-int GetCountPositiveElements(int[] array)
+void PrintArray(double[,] array)
 {
-    int count = 0;
-    foreach (var i in array)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        if (i > 0) count++;
+        Console.Write("[ ");
+         for (int j = 0; j < array.GetLength(0); j++)
+         {
+            Console.Write(array[i, j] + " "); 
+         }
+         Console.Write("]");
+         Console.WriteLine(" ");
     }
-    return count;
 }*/
+                                               
+  //                                             Задача 50
+ // Напишите программу,которая на вход принимает позиции элемента в двумерном массиве
+ //и возвращает значение этого элемента или же указание, что такого элемента нет.
+ //например задан массив:
+// 1 4 7 2
+//5 9 2 3
+//8 4 2 4 
+//i = 5; j = 2 -> такого числа в массиве нет
+//i = 1; j = 1;
 
-//Задача 43
-//написать программу, которая на вход принимает массив из любого количества
-//элементов  (не менее 6) в промежутке от 0 до 100, а на выходе
-//выводит этот же массив, но отсортированный по возрастанию меньшего числа к большеиу.
+/*int rows = ReadInt("Введите индекс строки: ");
+int colums = ReadInt("Введите индекс столбца: ");
+int[,] numbers = new int[7, 9];
+FillArray2D(numbers);
+PrintArray2D(numbers);
 
-/*int[] array = GetArray(10,0,100);
-Console.WriteLine($"{String.Join( ",",array)} ");
-ReverseArr(array);
-Console.WriteLine($"{String.Join( ",",array)} ");
-
-int[] GetArray(int size, int minValue, int maxValue)
+if (rows < numbers.GetLength(0) || colums < numbers.GetLength(1))
 {
-    int[] result = new int[size];
-    for(int i = 0; i < size; i++)
-    {
-        result[i] = new Random().Next(minValue, maxValue + 1);
-    }
-    return result;
+    Console.WriteLine((numbers[rows, colums]));
+}
+else
+{
+    Console.WriteLine($"{rows} {colums} -> такого числа в массиве нет");
 }
 
-int[] ReverseArr(int[] arr)
+void FillArray2D(int[,] array)
 {
-    for (int i = 0; i < arr.Length - 1; i++)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        for (int j = i + 1; j < arr.Length; j++)
+        for (int j = 0; j < array.GetLength(1); j++)
         {
-            if (arr[j] < arr[i])
-            {
-                int temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
-            }
+            array[i, j] = new Random().Next(1, 10);
         }
     }
-    return arr;
+} 
+  
+
+void PrintArray2D(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            Console.Write(array[i, j] + " ");
+        }
+        Console.WriteLine();
+    }
+    Console.WriteLine();
+}
+
+int ReadInt(string message)
+{
+    Console.Write(message);
+    return Convert.ToInt32(Console.ReadLine()!);
 }*/
 
+  //                                                Задача 52
 
+  //задайте двумерный массив из целыхъ чиселюНайдите среднее арифметическое  элементов в каждом столбцею
+  //Например задан массив:
+//1 4 7 2
+//5 9 2 3
+//8 4 2 4
+//средне арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
-
-
-
-
-
-
-
-
-
-    
-
- 
-
-
-
-
-
+/*Random random = new Random();
+int[,] arr = new int[random.Next(1, 10), random.Next(1, 10)];
+for (int i = 0; i < arr.GetLength(0); i++)
+{
+   for (int j = 0; j < arr.GetLength(1); j++)
+   {
+     arr[i, j] = random.Next(1, 10);
+    Console.Write(arr[i, j] + " ");
+   }
+   Console.WriteLine();
+}
+Console.WriteLine("----------------------------------");
+Console.WriteLine(arr.GetLength(0));
+for (int j = 0; j < arr.GetLength(1); j++)
+{
+    double sum = 0; 
+    for (int i = 0; i < arr.GetLength(0); i++)
+    {
+        sum += arr[i,j];
+    }
+    Console.Write($"{sum / arr.GetLength(0)} ");
+}
+Console.ReadLine();*/
